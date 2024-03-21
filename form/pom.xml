@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">  
   <modelVersion>4.0.0</modelVersion>  
   <parent> 
@@ -85,15 +84,15 @@
         <version>2.5.0</version>  
         <configuration> 
           <schemaVersion>v2</schemaVersion>  
-          <subscriptionId>16cfc856-c2f1-4103-80c3-8deba1743963</subscriptionId>  
-          <resourceGroup>rg_trainee_11</resourceGroup>  
-          <appName>afklmlro1510</appName>  
-          <pricingTier>P1v2</pricingTier>  
+          <subscriptionId>042583c2-64ed-4853-acd7-6dd13637f592</subscriptionId>  
+          <resourceGroup>trainee-6oya4c-8_rg</resourceGroup>  
+          <appName>wbtrainee08</appName>  
+          <pricingTier>P1v3</pricingTier>  
           <region>westeurope</region>  
-          <appServicePlanName>afklmlro1510-asp</appServicePlanName>  
-          <appServicePlanResourceGroup>rg_trainee_11</appServicePlanResourceGroup>  
+          <appServicePlanName>ASP-trainee6oya4c8rg-ae1b</appServicePlanName>  
+          <appServicePlanResourceGroup>trainee-6oya4c-8_rg</appServicePlanResourceGroup>  
           <runtime> 
-            <os>Linux</os>  
+            <os>Windows</os>  
             <javaVersion>17.0.2</javaVersion>  
             <webContainer>Java SE</webContainer> 
           </runtime>  
@@ -108,7 +107,25 @@
             </resources> 
           </deployment> 
         </configuration> 
-      </plugin> 
+      </plugin>
+        <plugin>
+            <groupId>com.microsoft.azure</groupId>
+            <artifactId>azure-webapp-maven-plugin</artifactId>
+            <version>2.13.0</version>
+            <configuration>
+                <runtime/>
+                <deployment>
+                    <resources>
+                        <resource>
+                            <directory>/workspaces/azure-developer-like/form/target</directory>
+                            <includes>
+                                <include>*.jar</include>
+                            </includes>
+                        </resource>
+                    </resources>
+                </deployment>
+            </configuration>
+        </plugin>
     </plugins> 
   </build> 
 	<dependencyManagement>
